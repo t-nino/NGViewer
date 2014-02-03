@@ -21,7 +21,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.ngviewer.R;
+import com.example.ngviewer.dropbox.DropboxUploader;
 import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
 
 /**
@@ -73,7 +73,12 @@ public class MainActivity extends FragmentActivity implements LoaderCallbacks<Ar
 		});
 
 		//asyncLoaderを初期化。initだとinitLoaderだと、最初の一回しか起動しないのでRestartを利用
-		getSupportLoaderManager().restartLoader(0,null,this);
+
+		//getSupportLoaderManager().restartLoader(0,null,this);
+
+		Intent nextIntent = new Intent(MainActivity.this,DropboxUploader.class);
+		startActivity(nextIntent);
+
 
 	}
 

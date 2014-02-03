@@ -40,7 +40,7 @@ public class ImageContainer{
 		link  = null;
 		image = null;
 		bitmap = null;
-		loadStatus = this.NOT;
+		loadStatus = NOT;
 		loader = ImageLoader.getInstance();
 	}
 
